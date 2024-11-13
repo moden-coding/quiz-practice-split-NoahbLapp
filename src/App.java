@@ -35,26 +35,30 @@ public class App {
     //Finish the countWords method that will take in a sentence String and return
     //the number of words in that sentence.
     public static int countWords(String sentence){
-        return -1;
+        return sentence.split(" ").length;
     }
 
     //Complete firstWord method that will take in a sentence String and return
     //the first word
     public static String firstWord(String sentence){
-        return null;
+        return sentence.split(" ")[0];
     }
 
     //Finish the reverseWords method that will take in a sentence String and return
     //an array with the words reversed
     public static String[] reverseWords(String sentence){
-        return null;
-
+        String[] parts = sentence.split(" ");
+        String[] backwards = new String[parts.length];
+        for(int i = parts.length; i > 0; i--){
+            backwards[parts.length-i] = parts[i-1];
+        }
+        return backwards;
     }
 
     //Finish the extractDomain method that will take in an email address with the
     //format: email@network.edu. Return only the domain portion of the email    
     public static String extractDomain(String email){
-        return null;
+        return email.split("@")[1];
     }
 
 
